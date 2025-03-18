@@ -1,7 +1,6 @@
 package gsmereka.example.api_upgrade.domain.repository;
 
 import gsmereka.example.api_upgrade.controller.dto.UserDto;
-import gsmereka.example.api_upgrade.domain.model.Account;
 import gsmereka.example.api_upgrade.domain.model.User;
 import gsmereka.example.api_upgrade.utils.PredefinedUser;
 import jakarta.persistence.EntityManager;
@@ -9,7 +8,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -30,10 +28,10 @@ class UserRepositoryTest {
     void tearDown() {
     }
 
-    @Mock
+    @Autowired
     UserRepository userRepository;
 
-    @Mock
+    @Autowired
     EntityManager entityManager;
 
 
@@ -42,7 +40,7 @@ class UserRepositoryTest {
     void existsByAccountNumberCase1() {
         String accountNumber = "1234";
         UserDto userDto = PredefinedUser.createUserDto();
-        this.entityManager.persist(userDto);
+        createUser(userDto);
         boolean result = this.userRepository.existsByAccountNumber(accountNumber);
         assertTrue(result);
     }
@@ -50,11 +48,10 @@ class UserRepositoryTest {
     @Test
     @DisplayName("Should not find User successfully from DB.")
     void existsByAccountNumberCase2() {
-        String accountNumber = "1234";
+        String accountNumber = "4321";
         UserDto userDto = PredefinedUser.createUserDto();
-        this.entityManager.persist(userDto);
+        createUser(userDto);
         boolean result = this.userRepository.existsByAccountNumber(accountNumber);
-        System.out.print(result);
         assertFalse(result);
     }
 
@@ -62,4 +59,8 @@ class UserRepositoryTest {
     void existsByCardNumber() {
     }
 
+    private void createUser(UserDto userDto) {
+        User newUser = new User(userDto);
+        this.entityManager.persist(newUser);
+    }
 }
