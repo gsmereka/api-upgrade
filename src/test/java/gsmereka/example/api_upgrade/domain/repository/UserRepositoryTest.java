@@ -3,11 +3,13 @@ package gsmereka.example.api_upgrade.domain.repository;
 import gsmereka.example.api_upgrade.controller.dto.UserDto;
 import gsmereka.example.api_upgrade.domain.model.Account;
 import gsmereka.example.api_upgrade.domain.model.User;
+import gsmereka.example.api_upgrade.utils.PredefinedUser;
 import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -28,31 +30,36 @@ class UserRepositoryTest {
     void tearDown() {
     }
 
-    @Autowired
+    @Mock
+    UserRepository userRepository;
+
+    @Mock
     EntityManager entityManager;
 
 
     @Test
-    @DisplayName("Should get User successfully from DB.")
+    @DisplayName("Should find User successfully from DB.")
     void existsByAccountNumberCase1() {
-//        User data = new User(0,"Gabriel", Account(""))
+        String accountNumber = "1234";
+        UserDto userDto = PredefinedUser.createUserDto();
+        this.entityManager.persist(userDto);
+        boolean result = this.userRepository.existsByAccountNumber(accountNumber);
+        assertTrue(result);
     }
 
     @Test
-    @DisplayName("Should not get User successfully from DB.")
+    @DisplayName("Should not find User successfully from DB.")
     void existsByAccountNumberCase2() {
+        String accountNumber = "1234";
+        UserDto userDto = PredefinedUser.createUserDto();
+        this.entityManager.persist(userDto);
+        boolean result = this.userRepository.existsByAccountNumber(accountNumber);
+        System.out.print(result);
+        assertFalse(result);
     }
 
     @Test
     void existsByCardNumber() {
     }
-
-
-    private User createUser(UserDto data){
-        User newUser = new User(data);
-        this.entityManager.persist(newUser);
-        return newUser;
-    }
-
 
 }

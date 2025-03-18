@@ -11,8 +11,8 @@ import java.math.BigDecimal;
 @Entity(name = "tb_account")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Account {
 
     @Id
@@ -29,4 +29,5 @@ public class Account {
 
     @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
+
 }
