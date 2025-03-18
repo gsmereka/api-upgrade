@@ -39,8 +39,11 @@ class UserRepositoryTest {
     @DisplayName("Should find User successfully from DB.")
     void existsByAccountNumberCase1() {
         String accountNumber = "1234";
-        UserDto userDto = PredefinedUser.createUserDto();
-        createUser(userDto);
+
+        User newUser = PredefinedUser.createUser();
+        newUser.getAccount().setNumber(accountNumber);
+
+        this.entityManager.persist(newUser);
         boolean result = this.userRepository.existsByAccountNumber(accountNumber);
         assertTrue(result);
     }
@@ -48,19 +51,41 @@ class UserRepositoryTest {
     @Test
     @DisplayName("Should not find User successfully from DB.")
     void existsByAccountNumberCase2() {
-        String accountNumber = "4321";
-        UserDto userDto = PredefinedUser.createUserDto();
-        createUser(userDto);
-        boolean result = this.userRepository.existsByAccountNumber(accountNumber);
+        String accountNumber = "1234";
+        String falseAccountNumber = "4321";
+
+        User newUser = PredefinedUser.createUser();
+        newUser.getAccount().setNumber(accountNumber);
+
+        this.entityManager.persist(newUser);
+        boolean result = this.userRepository.existsByAccountNumber(falseAccountNumber);
         assertFalse(result);
     }
 
     @Test
-    void existsByCardNumber() {
+    @DisplayName("Should find User successfully from DB.")
+    void existsByCardNumberCase1() {
+        String cardNumber = "1234";
+
+        User newUser = PredefinedUser.createUser();
+        newUser.getCard().setNumber(cardNumber);
+
+        this.entityManager.persist(newUser);
+        boolean result = this.userRepository.existsByCardNumber(cardNumber);
+        assertTrue(result);
     }
 
-    private void createUser(UserDto userDto) {
-        User newUser = new User(userDto);
+    @Test
+    @DisplayName("Should not find User successfully from DB.")
+    void existsByCardNumberCase2() {
+        String cardNumber = "1234";
+        String falseCardNumber = "4321";
+
+        User newUser = PredefinedUser.createUser();
+        newUser.getCard().setNumber(cardNumber);
+
         this.entityManager.persist(newUser);
+        boolean result = this.userRepository.existsByCardNumber(falseCardNumber);
+        assertFalse(result);
     }
 }

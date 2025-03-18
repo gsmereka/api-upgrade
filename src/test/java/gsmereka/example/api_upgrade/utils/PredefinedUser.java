@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PredefinedUser {
-    public static UserDto createUserDto() {
+    public static User createUser() {
 
         AccountDto accountDto = new AccountDto(null, "1234", "Banco do Brasil", new BigDecimal(1000), new BigDecimal(2000));
 
@@ -32,6 +32,6 @@ public class PredefinedUser {
                 newsDtos // news
         );
 
-        return userDto;
+        return new User(userDto);
     }
 }
