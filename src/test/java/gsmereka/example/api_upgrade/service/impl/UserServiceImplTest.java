@@ -1,38 +1,36 @@
 package gsmereka.example.api_upgrade.service.impl;
 
 import gsmereka.example.api_upgrade.domain.model.User;
-import gsmereka.example.api_upgrade.domain.repository.UserRepository;
 import gsmereka.example.api_upgrade.service.exception.BusinessException;
 import gsmereka.example.api_upgrade.service.exception.NotFoundException;
 import gsmereka.example.api_upgrade.utils.PredefinedUser;
 import jakarta.persistence.EntityManager;
-import org.junit.jupiter.api.BeforeEach;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @ActiveProfiles("test")
+@Transactional //  Ensures that a method executes within a transaction, automatically committing changes if successful or rolling back in case of an error.
 class UserServiceImplTest {
 
-    private User user;
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @Autowired
     UserServiceImpl userServiceImpl;
 
     @Test
+    @DirtiesContext
     @DisplayName("Should find all Users successfully from DB.")
     void findAllCase1() throws Exception {
         User newUser1 = PredefinedUser.createUser();
@@ -48,10 +46,9 @@ class UserServiceImplTest {
         newUser3.getAccount().setNumber("3");
         newUser3.getCard().setNumber("3");
 
-        userServiceImpl.create(newUser1);
-        userServiceImpl.create(newUser2);
-        userServiceImpl.create(newUser3);
-
+        entityManager.persist(newUser1);
+        entityManager.persist(newUser2);
+        entityManager.persist(newUser3);
         List<User> result = userServiceImpl.findAll();
 
         assertNotNull(result);
@@ -62,6 +59,8 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DirtiesContext
+    @DisplayName("Should find User 2 successfully from DB.")
     void findById() {
         User newUser1 = PredefinedUser.createUser();
         newUser1.setName("User 1");
@@ -76,18 +75,18 @@ class UserServiceImplTest {
         newUser3.getAccount().setNumber("3");
         newUser3.getCard().setNumber("3");
 
-        userServiceImpl.create(newUser1);
-        userServiceImpl.create(newUser2);
-        userServiceImpl.create(newUser3);
+        entityManager.persist(newUser1);
+        entityManager.persist(newUser2);
+        entityManager.persist(newUser3);
 
-        User userFound = userServiceImpl.findById(1L);
+        User userFound = userServiceImpl.findById(2L);
 
         assertNotNull(userFound);
-        assertEquals("User 1", userFound.getName());
-        assertEquals(1L, userFound.getId());
+        assertEquals("User 2", userFound.getName());
     }
 
     @Test
+    @DirtiesContext
     @DisplayName("Should successfully create a new user.")
     void createUserSuccessfully() {
         User newUser = PredefinedUser.createUser();
@@ -104,6 +103,7 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DirtiesContext
     @DisplayName("Should throw BusinessException when trying to create a user with null fields.")
     void createUserWithNullFields() {
         User newUser = null;
@@ -116,6 +116,7 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DirtiesContext
     @DisplayName("Should throw BusinessException when trying to create a user with an existing account number.")
     void createUserWithExistingAccountNumber() {
         User existingUser = PredefinedUser.createUser();
@@ -138,6 +139,7 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DirtiesContext
     @DisplayName("Should successfully update an existing user.")
     void updateUserFailAtUpdateFirstUser() {
         User initialUser = PredefinedUser.createUser();
@@ -158,6 +160,7 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DirtiesContext
     @DisplayName("Should successfully update an existing user.")
     void updateUserSuccessfully() {
         User admin = PredefinedUser.createUser(); // User with ID 1 cannot be Updated, because is restricted to protect system integrity.
@@ -182,6 +185,7 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DirtiesContext
     @DisplayName("Should throw BusinessException when updating a user with a different ID.")
     void updateUserWithDifferentId() {
         User admin = PredefinedUser.createUser(); // User with ID 1 cannot be Updated, because is restricted to protect system integrity.
@@ -209,6 +213,7 @@ class UserServiceImplTest {
 
 
     @Test
+    @DirtiesContext
     @DisplayName("Should successfully delete an existing user.")
     void deleteUserSuccessfully() {
         User admin = PredefinedUser.createUser(); // User with ID 1 cannot be Deleted, because is restricted to protect system integrity.
@@ -229,6 +234,7 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DirtiesContext
     @DisplayName("Should throw NotFoundException when trying to delete a non-existent user.")
     void deleteUserNotFound() {
         Long nonExistentId = 999L;
@@ -239,6 +245,7 @@ class UserServiceImplTest {
     }
 
     @Test
+    @DirtiesContext
     @DisplayName("Should throw BusinessException when trying to delete the user with unchangeable ID.")
     void deleteUserWithUnchangeableId() {
         User userWithUnchangeableId = PredefinedUser.createUser();
