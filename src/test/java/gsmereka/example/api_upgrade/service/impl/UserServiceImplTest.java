@@ -180,6 +180,32 @@ class UserServiceImplTest {
         assertEquals("98765", updatedUser.getCard().getNumber());
     }
 
+    @Test
+    @DisplayName("Should throw BusinessException when updating a user with a different ID.")
+    void updateUserWithDifferentId() {
+        User admin = PredefinedUser.createUser(); // User with ID 1 cannot be Updated, because is restricted to protect system integrity.
+        userServiceImpl.create(admin);
+
+        User initialUser = PredefinedUser.createUser();
+        initialUser.setName("Initial User");
+        initialUser.getAccount().setNumber("12345");
+        initialUser.getCard().setNumber("67890");
+        User createdUser = userServiceImpl.create(initialUser);
+
+
+        User userToUpdate = PredefinedUser.createUser();
+        userToUpdate.setId(3L); // ID different
+        userToUpdate.setName("Updated User");
+        userToUpdate.getAccount().setNumber("54321");
+        userToUpdate.getCard().setNumber("98765");
+
+        BusinessException thrown = assertThrows(BusinessException.class, () -> {
+            userServiceImpl.update(createdUser.getId(), userToUpdate);
+        });
+
+        assertEquals("Update IDs must be the same.", thrown.getMessage());
+    }
+
 
     @Test
     void delete() {
