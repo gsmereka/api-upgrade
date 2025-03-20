@@ -3,6 +3,7 @@ package gsmereka.example.api_upgrade.service.impl;
 import gsmereka.example.api_upgrade.domain.model.User;
 import gsmereka.example.api_upgrade.domain.repository.UserRepository;
 import gsmereka.example.api_upgrade.service.exception.BusinessException;
+import gsmereka.example.api_upgrade.service.exception.NotFoundException;
 import gsmereka.example.api_upgrade.utils.PredefinedUser;
 import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
@@ -208,6 +209,47 @@ class UserServiceImplTest {
 
 
     @Test
-    void delete() {
+    @DisplayName("Should successfully delete an existing user.")
+    void deleteUserSuccessfully() {
+        User admin = PredefinedUser.createUser(); // User with ID 1 cannot be Deleted, because is restricted to protect system integrity.
+        userServiceImpl.create(admin);
+
+        User userToDelete = PredefinedUser.createUser();
+        userToDelete.setName("User to be deleted");
+        userToDelete.getAccount().setNumber("12345");
+        userToDelete.getCard().setNumber("67890");
+
+        User createdUser = userServiceImpl.create(userToDelete);
+
+        userServiceImpl.delete(createdUser.getId());
+
+        assertThrows(NotFoundException.class, () -> {
+            userServiceImpl.findById(createdUser.getId());
+        });
     }
+
+    @Test
+    @DisplayName("Should throw NotFoundException when trying to delete a non-existent user.")
+    void deleteUserNotFound() {
+        Long nonExistentId = 999L;
+
+        assertThrows(NotFoundException.class, () -> {
+            userServiceImpl.delete(nonExistentId);
+        });
+    }
+
+    @Test
+    @DisplayName("Should throw BusinessException when trying to delete the user with unchangeable ID.")
+    void deleteUserWithUnchangeableId() {
+        User userWithUnchangeableId = PredefinedUser.createUser();
+        userWithUnchangeableId.setId(1L);
+        userWithUnchangeableId.setName("User with unchangeable ID");
+
+        BusinessException thrown = assertThrows(BusinessException.class, () -> {
+            userServiceImpl.delete(userWithUnchangeableId.getId());
+        });
+
+        assertEquals("User with ID 1 can not be deleted.", thrown.getMessage());
+    }
+
 }
