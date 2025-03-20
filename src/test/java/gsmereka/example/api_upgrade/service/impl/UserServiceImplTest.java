@@ -62,6 +62,28 @@ class UserServiceImplTest {
 
     @Test
     void findById() {
+        User newUser1 = PredefinedUser.createUser();
+        newUser1.setName("User 1");
+        newUser1.getAccount().setNumber("1");
+        newUser1.getCard().setNumber("1");
+        User newUser2 = PredefinedUser.createUser();
+        newUser2.setName("User 2");
+        newUser2.getAccount().setNumber("2");
+        newUser2.getCard().setNumber("2");
+        User newUser3 = PredefinedUser.createUser();
+        newUser3.setName("User 3");
+        newUser3.getAccount().setNumber("3");
+        newUser3.getCard().setNumber("3");
+
+        userServiceImpl.create(newUser1);
+        userServiceImpl.create(newUser2);
+        userServiceImpl.create(newUser3);
+
+        User userFound = userServiceImpl.findById(1L);
+
+        assertNotNull(userFound);
+        assertEquals("User 1", userFound.getName());
+        assertEquals(1L, userFound.getId());
     }
 
     @Test
