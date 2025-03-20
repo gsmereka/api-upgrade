@@ -3,7 +3,7 @@
 <!-- HEADER STYLE: CLASSIC -->
 <div align="center">
 
-<img src="readmeai/assets/logos/purple.svg" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
+<img src="https://assets.dio.me/n-qUDWOjfvxZrZ86D00DSUTwDe3LuQEdUL4y-5yGryA/f:webp/h:120/q:80/L3RyYWNrcy8xNTliNTRkMS1iYmY0LTRmNzItYTcxNy02OTM5OGE3YWE2ODMucG5n" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
 
 # API-UPGRADE
 
@@ -30,10 +30,10 @@
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Features](#features)
+- [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
     - [Project Index](#project-index)
 - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
     - [Testing](#testing)
@@ -46,13 +46,28 @@
 
 ## Overview
 
+This project is part of the **Decola Tech 2025** bootcamp, a collaboration between [DIO](https://www.dio.me/), [Avanade](https://www.avanade.com/). The bootcamp aims to equip participants with essential skills in full-stack development using **Spring Boot** and **Angular**, as well as foundational knowledge in **Artificial Intelligence** and **Azure** for efficient deployment. Upon completion, participants have the opportunity to apply for paid internships at Avanade.
 
+Throughout the bootcamp, I enhanced and experimented with the API developed using **Java Spring Boot**. As part of the learning process, I migrated the project from **Gradle** to **Maven** and added tests for the **User Repository**, along with implementing the **User Service** tests.
+
+The original API repository learned during the course can be found here: [Santander Dev Week 2023 API](https://github.com/digitalinnovationone/santander-dev-week-2023-api).
 
 ---
 
-## Features
+# Features
 
-<code>❯ REPLACE-ME</code>
+- **Migration to Maven**: Transitioned the project build system from Gradle to Maven for improved dependency management and build consistency.
+- **User Repository Tests**: Developed unit tests to ensure the reliability and correctness of the User Repository.
+- **User Service Implementations**: Created service layer implementations to handle business logic related to user operations.
+
+---
+
+# Technologies Used
+
+- **Java 17**: Utilized the latest LTS version of Java to leverage its robust features and performance improvements.
+- **Spring Boot 3**: Employed the newest version of Spring Boot to maximize developer productivity through its powerful autoconfiguration capabilities.
+- **Spring Data JPA**: Simplified data access layer by integrating with SQL databases using Spring Data JPA.
+- **OpenAPI (Swagger)**: Implemented API documentation using OpenAPI (Swagger) for clear and interactive API specifications.
 
 ---
 
@@ -526,16 +541,8 @@
 
 ## Getting Started
 
-### Prerequisites
-
-This project requires the following dependencies:
-
-- **Programming Language:** Java
-- **Package Manager:** Maven
 
 ### Installation
-
-Build api-upgrade from the source and intsall dependencies:
 
 1. **Clone the repository:**
 
@@ -547,20 +554,6 @@ Build api-upgrade from the source and intsall dependencies:
 
     ```sh
     ❯ cd api-upgrade
-    ```
-
-3. **Install the dependencies:**
-
-<!-- SHIELDS BADGE CURRENTLY DISABLED -->
-    <!-- [![maven][maven-shield]][maven-link] -->
-    <!-- REFERENCE LINKS -->
-    <!-- [maven-shield]: https://img.shields.io/badge/Maven-C71A36.svg?style={badge_style}&logo=apache-maven&logoColor=white -->
-    <!-- [maven-link]: https://maven.apache.org/ -->
-
-    **Using [maven](https://maven.apache.org/):**
-
-    ```sh
-    ❯ mvn install
     ```
 
 ### Usage
@@ -585,9 +578,10 @@ mvn test
 
 ## Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Task 1`**: <strike>Move from Gradle to Maven</strike>
+- [X] **`Task 2`**: <strike>Add JPA repository Tests</strike>
+- [X] **`Task 3`**: <strike>Add user service Tests</strike>
+- [ ] **`Task 4`**: Add Sequential user service Tests.
 
 ---
 
