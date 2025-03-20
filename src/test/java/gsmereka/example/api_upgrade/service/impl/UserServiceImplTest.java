@@ -27,15 +27,9 @@ class UserServiceImplTest {
 
     private User user;
 
-
-//    @Autowired
-//    EntityManager entityManager;
-
     @Autowired
     UserServiceImpl userServiceImpl;
 
-//    @Autowired
-//    UserRepository userRepository;
 
     @Test
     @DisplayName("Should find all Users successfully from DB.")
@@ -52,10 +46,6 @@ class UserServiceImplTest {
         newUser3.setName("User 3");
         newUser3.getAccount().setNumber("3");
         newUser3.getCard().setNumber("3");
-
-//        this.entityManager.persist(newUser1);
-//        this.entityManager.persist(newUser2);
-//        this.entityManager.persist(newUser3);
 
         userServiceImpl.create(newUser1);
         userServiceImpl.create(newUser2);
