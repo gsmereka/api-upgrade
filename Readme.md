@@ -39,7 +39,6 @@
     - [Testing](#testing)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ---
@@ -102,15 +101,15 @@ The original API repository learned during the course can be found here: [Santan
             </thead>
                 <tr style='border-bottom: 1px solid #eee;'>
                     <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/pom.xml'>pom.xml</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                    <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                 </tr>
                 <tr style='border-bottom: 1px solid #eee;'>
                     <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/mvnw'>mvnw</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                    <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                 </tr>
                 <tr style='border-bottom: 1px solid #eee;'>
                     <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/mvnw.cmd'>mvnw.cmd</a></b></td>
-                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                    <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                 </tr>
             </table>
         </blockquote>
@@ -160,7 +159,7 @@ The original API repository learned during the course can be found here: [Santan
                                                     </thead>
                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/test/java/gsmereka/example/api_upgrade/ApiUpgradeApplicationTests.java'>ApiUpgradeApplicationTests.java</a></b></td>
-                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                         </tr>
                                                     </table>
                                                     <!-- utils Submodule -->
@@ -178,7 +177,7 @@ The original API repository learned during the course can be found here: [Santan
                                                             </thead>
                                                                 <tr style='border-bottom: 1px solid #eee;'>
                                                                     <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/test/java/gsmereka/example/api_upgrade/utils/PredefinedUser.java'>PredefinedUser.java</a></b></td>
-                                                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                    <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                 </tr>
                                                             </table>
                                                         </blockquote>
@@ -204,7 +203,7 @@ The original API repository learned during the course can be found here: [Santan
                                                                     </thead>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/test/java/gsmereka/example/api_upgrade/domain/repository/UserRepositoryTest.java'>UserRepositoryTest.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                     </table>
                                                                 </blockquote>
@@ -232,7 +231,7 @@ The original API repository learned during the course can be found here: [Santan
                                                                     </thead>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/test/java/gsmereka/example/api_upgrade/service/impl/UserServiceImplTest.java'>UserServiceImplTest.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                     </table>
                                                                 </blockquote>
@@ -288,7 +287,7 @@ The original API repository learned during the course can be found here: [Santan
                                                     </thead>
                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/ApiUpgradeApplication.java'>ApiUpgradeApplication.java</a></b></td>
-                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                         </tr>
                                                     </table>
                                                     <!-- domain Submodule -->
@@ -312,27 +311,27 @@ The original API repository learned during the course can be found here: [Santan
                                                                     </thead>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/domain/model/Account.java'>Account.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/domain/model/BaseItem.java'>BaseItem.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/domain/model/News.java'>News.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/domain/model/Feature.java'>Feature.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/domain/model/Card.java'>Card.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/domain/model/User.java'>User.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                     </table>
                                                                 </blockquote>
@@ -352,7 +351,7 @@ The original API repository learned during the course can be found here: [Santan
                                                                     </thead>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/domain/repository/UserRepository.java'>UserRepository.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                     </table>
                                                                 </blockquote>
@@ -374,11 +373,11 @@ The original API repository learned during the course can be found here: [Santan
                                                             </thead>
                                                                 <tr style='border-bottom: 1px solid #eee;'>
                                                                     <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/service/UserService.java'>UserService.java</a></b></td>
-                                                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                    <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                 </tr>
                                                                 <tr style='border-bottom: 1px solid #eee;'>
                                                                     <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/service/CrudService.java'>CrudService.java</a></b></td>
-                                                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                    <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                 </tr>
                                                             </table>
                                                             <!-- exception Submodule -->
@@ -396,11 +395,11 @@ The original API repository learned during the course can be found here: [Santan
                                                                     </thead>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/service/exception/NotFoundException.java'>NotFoundException.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/service/exception/BusinessException.java'>BusinessException.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                     </table>
                                                                 </blockquote>
@@ -420,7 +419,7 @@ The original API repository learned during the course can be found here: [Santan
                                                                     </thead>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/service/impl/UserServiceImpl.java'>UserServiceImpl.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                     </table>
                                                                 </blockquote>
@@ -442,7 +441,7 @@ The original API repository learned during the course can be found here: [Santan
                                                             </thead>
                                                                 <tr style='border-bottom: 1px solid #eee;'>
                                                                     <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/controller/UserController.java'>UserController.java</a></b></td>
-                                                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                    <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                 </tr>
                                                             </table>
                                                             <!-- exceptionHandler Submodule -->
@@ -460,7 +459,7 @@ The original API repository learned during the course can be found here: [Santan
                                                                     </thead>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/controller/exceptionHandler/GlobalExceptionHandler.java'>GlobalExceptionHandler.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                     </table>
                                                                 </blockquote>
@@ -480,23 +479,23 @@ The original API repository learned during the course can be found here: [Santan
                                                                     </thead>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/controller/dto/UserDto.java'>UserDto.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/controller/dto/CardDto.java'>CardDto.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/controller/dto/FeatureDto.java'>FeatureDto.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/controller/dto/NewsDto.java'>NewsDto.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                         <tr style='border-bottom: 1px solid #eee;'>
                                                                             <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/java/gsmereka/example/api_upgrade/controller/dto/AccountDto.java'>AccountDto.java</a></b></td>
-                                                                            <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                                                            <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                                                         </tr>
                                                                     </table>
                                                                 </blockquote>
@@ -526,7 +525,7 @@ The original API repository learned during the course can be found here: [Santan
                             </thead>
                                 <tr style='border-bottom: 1px solid #eee;'>
                                     <td style='padding: 8px;'><b><a href='https://github.com/gsmereka/api-upgrade/blob/master/src/main/resources/application-dev.yml'>application-dev.yml</a></b></td>
-                                    <td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
+                                    <td style='padding: 8px;'>Code>❯ Coming Soon</code></td>
                                 </tr>
                             </table>
                         </blockquote>
@@ -628,15 +627,11 @@ mvn test
 
 ---
 
-## License
-
-Api-upgrade is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
 ## Acknowledgments
 
-- Credit `contributors`, `inspiration`, `references`, etc.
+- [DIO](https://www.dio.me/)
+- [Avanade](https://www.avanade.com/)
+- [Santander Dev Week 2023 API](https://github.com/digitalinnovationone/santander-dev-week-2023-api)
 
 <div align="right">
 
